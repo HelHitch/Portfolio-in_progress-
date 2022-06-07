@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "7e94bc46-3ce6-498b-b077-cbfa39bac226",
+		"name": "Create task after registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20021695"
+	},
+	"item": [
+		{
+			"name": "Create task/ Создать задачу",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/CreateTask?task_title=task1&task_description=test&email_owner=test@bk.ru&email_assign=test@bk.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"CreateTask"
+					],
+					"query": [
+						{
+							"key": "task_title",
+							"value": "task1"
+						},
+						{
+							"key": "task_description",
+							"value": "test"
+						},
+						{
+							"key": "email_owner",
+							"value": "test@bk.ru"
+						},
+						{
+							"key": "email_assign",
+							"value": "test@bk.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doRegister/ Зарегестрироваться",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doRegister?email=test@bk.ru&password=12345&name=name",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doRegister"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@bk.ru"
+						},
+						{
+							"key": "password",
+							"value": "12345"
+						},
+						{
+							"key": "name",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTaskInCron / Добавить задачу в расписание",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/AddTaskInCron?email_owner=test@bk.ru&task_id=71&hours=12&minutes=19&month=05&days=15&day_weeks=2",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"AddTaskInCron"
+					],
+					"query": [
+						{
+							"key": "email_owner",
+							"value": "test@bk.ru"
+						},
+						{
+							"key": "task_id",
+							"value": "71"
+						},
+						{
+							"key": "hours",
+							"value": "12"
+						},
+						{
+							"key": "minutes",
+							"value": "19"
+						},
+						{
+							"key": "month",
+							"value": "05"
+						},
+						{
+							"key": "days",
+							"value": "15"
+						},
+						{
+							"key": "day_weeks",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
